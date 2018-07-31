@@ -1,0 +1,24 @@
+<div class="container">
+        <button class="btn btn-primary"routerLink="/addodeljenje">Novo odeljenje</button>
+        <table class="table table-striped">
+            <thead>
+                <th>Id</th>
+                <th>Razred</th>
+                <th>Vrednost</th>
+                <th>Operations </th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let odeljenje of odeljenja$ | async">
+                    <td>{{odeljenje.idOdeljenje}}</td>
+                    <td>{{odeljenje.razred.vrednost}}</td>
+                    <td>{{odeljenje.vrednost}}</td>
+                   
+                    <td><button class="btn btn-danger" (click)="delete(odeljenje.idOdeljenje)">Obriši</button>
+                        <button class="btn btn-primary" routerLink="{{'/editodeljenje/' + odeljenje.idOdeljenje}}">Izmeni</button>
+                        
+    
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-primary"routerLink="/addodeljenje">Novo odeljenje</button>
+    </div>

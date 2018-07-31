@@ -1,0 +1,34 @@
+<div class="container">
+
+        <button class="btn btn-primary"  routerLink="/add">Novi administrator</button>
+
+    <table class="table table-striped">
+        <thead>
+            <th>Id</th>
+            <th>Ime</th>
+            <th>Prezime</th>
+            <th>Korisničko ime </th>
+            <th>Email </th>
+
+            <th>Operacija </th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let administrator of administratori$ | async">
+                <td>{{administrator.id}}</td>
+                <td>{{administrator.ime}}</td>
+                <td>{{administrator.prezime}}</td>
+                <td>{{administrator.korisnickoIme}}</td>
+                <td>{{administrator.email}}</td>
+
+                <td>
+                        
+                    <button class="btn btn-danger" (click)="delete(administrator.id)">Obriši</button>
+                    <button class="btn btn-primary"  routerLink="{{'/edit/' + administrator.id}}">Izmeni</button>
+                    
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-primary"  routerLink="/add">Novi administrator</button>
+</div>

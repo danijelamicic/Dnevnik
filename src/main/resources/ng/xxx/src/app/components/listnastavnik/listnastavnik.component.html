@@ -1,0 +1,32 @@
+<div class="container">
+
+        <button class="btn btn-primary" routerLink="/addnastavnik">Novi nastavnik</button>
+
+  <table class="table table-striped">
+      <thead>
+          <th>Id</th>
+          <th>Ime</th>
+          <th>Prezime</th>
+          <th>Korisničko ime </th>
+          <th>Email </th>
+          
+          <th>Operacija </th>
+      </thead>
+      <tbody>
+          <tr *ngFor="let nastavnik of nastavnici$ | async">
+              <td>{{nastavnik.id}}</td>
+              <td>{{nastavnik.ime}}</td>
+              <td>{{nastavnik.prezime}}</td>
+              <td>{{nastavnik.korisnickoIme}}</td>
+              <td>{{nastavnik.email}}</td>
+            
+              <td><button class="btn btn-danger" (click)="delete(nastavnik.id)">Obriši</button>
+                  <button class="btn btn-primary"  routerLink="{{'/editnastavnik/' + nastavnik.id}}">Izmeni</button>
+                 
+              </td>
+          </tr>
+      </tbody>
+  </table>
+  <button class="btn btn-primary" routerLink="/addnastavnik">Novi nastavnik</button>
+  
+</div>

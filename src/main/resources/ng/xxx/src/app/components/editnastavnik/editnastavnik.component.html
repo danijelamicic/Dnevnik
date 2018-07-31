@@ -1,0 +1,45 @@
+<div>
+  <div class="text-center mt-3">
+      <h3>Izmena podataka o nastavniku</h3>
+  </div>
+  <div class="mt-4 p-3">
+      <form class="form-add clearfix w-50 mx-auto p-4" ngNativeValidate (submit)="izmeniNastavnika()">
+
+          <div class="form-group">
+              <label for="ime">Ime</label>
+              <input class="form-control" type="text" name="ime" [(ngModel)]="nastavnik.ime" tabindex="1" required/>
+          </div>
+          <div class="form-group">
+              <label for="prezime">Prezime</label>
+              <input class="form-control" type="text" name="prezime" [(ngModel)]="nastavnik.prezime" tabindex="2" required />
+          </div>
+
+          <div class="form-group">
+              <label for="korisnickoIme">Korisničko ime</label>
+              <input class="form-control" type="text" name="korisnickoIme" [(ngModel)]="nastavnik.korisnickoIme" tabindex="3" required
+              />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input class="form-control" type="email"  name="email" [(ngModel)]="nastavnik.email" tabindex="4" required
+            />
+        </div>
+        <div class="form-group">
+          <label for="lozinka">Lozinka</label>
+          <input class="form-control" type="password" name="lozinka" [(ngModel)]="nastavnik.lozinka" tabindex="5" required
+          />
+      </div>
+      <div class="form-group">
+            <label for="zvanje">Zvanje</label>
+            <input class="form-control" type="text"  name="zvanje" [(ngModel)]="nastavnik.zvanje" tabindex="6" required
+            />
+        </div>
+          <div class="float-right">
+              <button class="btn btn-outline-primary mr-1" type="submit" tabindex="7">Izmeni nastavnika</button>
+              <button class="btn btn-outline-warning" type="button" tabindex="8" (click)="goBack()">Odustani</button>
+          </div>
+
+      </form>
+  </div>
+</div>

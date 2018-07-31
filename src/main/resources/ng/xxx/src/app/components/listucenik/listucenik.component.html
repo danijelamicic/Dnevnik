@@ -1,0 +1,31 @@
+<div class="container">
+
+        <button class="btn btn-primary"  routerLink="/adducenik">Novi ucenik</button>
+
+  <table class="table table-striped">
+      <thead>
+          <th>Id</th>
+          <th>Ime</th>
+          <th>Prezime</th>
+          <th>Korisničko ime </th>
+          <th>Email </th>
+          
+          <th>Operacija </th>
+      </thead>
+      <tbody>
+          <tr *ngFor="let ucenik of ucenici$ | async">
+              <td>{{ucenik.id}}</td>
+              <td>{{ucenik.ime}}</td>
+              <td>{{ucenik.prezime}}</td>
+              <td>{{ucenik.korisnickoIme}}</td>
+              <td>{{ucenik.email}}</td>
+            
+              <td><button class="btn btn-danger" (click)="delete(ucenik.id)">Obriši</button>
+                  <button class="btn btn-primary"  routerLink="{{'/editucenik/' + ucenik.id}}">Izmeni</button>
+                  
+                </td>
+          </tr>
+      </tbody>
+  </table>
+  <button class="btn btn-primary"  routerLink="/adducenik">Novi ucenik</button>
+</div>

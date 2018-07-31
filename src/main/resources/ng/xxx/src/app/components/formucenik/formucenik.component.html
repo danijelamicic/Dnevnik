@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <h3>DODAJ NOVOG UCENIKA</h3>
+    <br/>
+    <form class="form-add clearfix w-50 mx-auto p-4" ngNativeValidate (submit)="dodajNovogUcenika(ime.value, prezime.value, korisnickoIme.value, 
+          lozinka.value, email.value)">
+
+      <input type="reset" class=" btn pull-right btn-sm" value="Reset">
+      <br/>
+      <div class="form group">
+        <label for="ime">Ime</label>
+        <input type="text" class="form-control" id="ime" #ime tabindex="1" required>
+        <!-- <small id="passwordHelpBlock" class="invalid-feedback">
+                  Your name must be 8-20 characters long.
+                </small> -->
+
+      </div>
+      <br/>
+
+      <div class="form group">
+        <label for="prezime">Prezime</label>
+        <input type="text" id="prezime" class="form-control" #prezime tabindex="2" required>
+      </div>
+      <br/>
+
+      <div class="form group">
+        <label for="korisnickoImekorisnickoIme">Korisničko ime</label>
+        <input type="text" id="korisnickoIme" class="form-control" #korisnickoIme tabindex="3" required>
+      </div>
+      <br/>
+
+      <div class="form group">
+        <label for="lozinka">Lozinka</label>
+        <input type="lozinka" id="lozinka" class="form-control" #lozinka tabindex="4" required>
+      </div>
+      <br/>
+
+
+      <div class="form group">
+        <label for="email">Email</label>
+        <input type="email" id="email" class="form-control" #email tabindex="7" required>
+      </div>
+      <br/>
+      <br/>
+      <br/>
+      <div>
+        <button class="btn btn-outline-primary mr-1" type="submit" tabindex="6">Dodaj ucenika</button>
+        <button class="btn btn-default pull-right " (click)="goBack()">Cancel</button>
+        <!-- <button  class="btn btn-default pull-right "  onclick="history.go(-1)">Cancel</button> -->
+
+
+      </div>
+    </form>
+
+  </div>
+
+
+
+</body>
+
+</html>

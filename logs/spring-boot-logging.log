@@ -1,0 +1,9 @@
+2018-07-24 10:38:56.630  WARN 1924 --- [HikariPool-4 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=15h52m14s13ms805µs167ns).
+2018-07-24 10:39:57.850  WARN 1924 --- [HikariPool-4 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=1m4s220ms716µs303ns).
+2018-07-24 17:37:38.610  WARN 1924 --- [HikariPool-4 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=6h35m31s40ms781µs740ns).
+2018-07-24 17:44:08.053  INFO 1924 --- [Thread-32] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@59236035: startup date [Mon Jul 23 16:27:56 CEST 2018]; root of context hierarchy
+2018-07-24 17:44:12.621  INFO 1924 --- [Thread-32] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-07-24 17:44:12.668  INFO 1924 --- [Thread-32] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-07-24 17:44:14.357  INFO 1924 --- [Thread-32] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-07-24 17:44:16.578  INFO 1924 --- [Thread-32] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2018-07-24 17:44:17.031  INFO 1924 --- [Thread-32] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.

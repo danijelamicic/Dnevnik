@@ -1,0 +1,59 @@
+<div class="container-fluid">
+    <div class="div-header">
+      <nav>
+          <a routerLink="/roditelji"><button type="button" class="btn btn-outline-secondary"
+            *ngIf="authService.role == 'ROLE_ADMINISTRATOR'"> Roditelji</button></a>
+          <a routerLink="/ucenici"><button type="button" class="btn btn-outline-secondary"
+            *ngIf="authService.role == 'ROLE_ADMINISTRATOR'"> Učenici</button></a>
+          <a routerLink="/nastavnici"><button type="button" class="btn btn-outline-secondary"
+            *ngIf="authService.role == 'ROLE_ADMINISTRATOR'"> Nastavnici</button></a>
+          <a routerLink="/admini"><button type="button" class="btn btn-outline-secondary"
+            *ngIf="authService.role == 'ROLE_ADMINISTRATOR'"> Administratori</button></a>
+          <a routerLink="/ocenest"><button type="button" class="btn btn-outline-secondary"
+            *ngIf="authService.role == 'ROLE_UCENIK'"> Ocene</button></a>
+            <a routerLink="/predaje"><button type="button" class="btn btn-outline-secondary"
+              *ngIf="authService.role == 'ROLE_ADMINISTRATOR'"> Predmetni nastavnici</button></a>
+              <a routerLink="/odeljenja"><button type="button" class="btn btn-outline-secondary"
+                *ngIf="authService.role == 'ROLE_ADMINISTRATOR'"> Odeljenja</button></a>
+                <a routerLink="/decaroditelja"><button type="button" class="btn btn-outline-secondary"
+                  *ngIf="authService.role == 'ROLE_RODITELJ'"> Dete</button></a>
+          
+        <!-- <a routerLink="/dashboard">Početna</a> -->
+        <!-- <a routerLink="/nastavnici">Nastavnici</a> -->
+        <!-- <a routerLink="/ucenici">Ucenici</a> -->
+        <!-- <a routerLink="/admini" *ngIf="authService.role == 'ROLE_ADMINISTRATOR'">Administratori</a> -->
+        <!-- <a routerLink="/roditelji">Roditelji</a> -->
+        <!-- <a routerLink="/odeljenja">Odeljenja</a> -->
+        <!-- <a routerLink="/predaje">Predmetni nastavnici</a> -->
+      </nav>
+      <h1 class="text-center">
+        Dobro došli u {{ title }} 
+      </h1>
+      <div class="form-row float-right">
+        <button class="btn btn-info" routerLink="/login">
+          <i class="fa fa-sign-out"></i>Logout
+        </button>
+      </div>
+      <!-- <a routerLink="/roditelji"><button type="button" class="btn btn-outline-secondary" -->
+        <!-- *ngIf="authService.role == 'ROLE_ADMINISTRATOR'"> Roditelji</button></a> -->
+      <!-- <a routerLink="/ucenici"><button type="button" class="btn btn-outline-secondary" -->
+        <!-- *ngIf="authService.role == 'ROLE_ADMINISTRATOR'"> Učenici</button></a> -->
+      <!-- <a routerLink="/nastavnici"><button type="button" class="btn btn-outline-secondary" -->
+        <!-- *ngIf="authService.role == 'ROLE_ADMINISTRATOR'"> Nastavnici</button></a> -->
+      <!-- <a routerLink="/admini"><button type="button" class="btn btn-outline-secondary" -->
+        <!-- *ngIf="authService.role == 'ROLE_ADMINISTRATOR'"> Administratori</button></a> -->
+      <!-- <a routerLink="/ocenest"><button type="button" class="btn btn-outline-secondary" -->
+        <!-- *ngIf="authService.role == 'ROLE_UCENIK'"> Ocene</button></a> -->
+      
+      <img class="img-banner d-block mx-auto" src="./assets/dnevnik.jpg" alt="EDnevnik_slika ">
+    </div>
+    <div class="div-body">
+      <router-outlet></router-outlet>
+    </div> 
+    <!-- <a class="deco-none" routerLink="/add"><button class="btn btn-outline-primary mr-1 clickable">Dodaj admina</button></a> -->
+    <div class="my-3 section-break">
+      <app-message-list></app-message-list>
+    </div>
+  </div>
+  <div></div>
+

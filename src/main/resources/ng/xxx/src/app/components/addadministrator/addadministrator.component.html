@@ -1,0 +1,39 @@
+<div>
+  <div class="text-center mt-3">
+      <h3>Dodavanje novog administratora</h3>
+  </div>
+  <div class="mt-4 p-3">
+      <form class="form-add clearfix w-50 mx-auto p-4" ngNativeValidate (submit)="dodajNovogAdministratora(ime.value, prezime.value, korisnickoIme.value, email.value, lozinka.value)">
+
+          <div class="form-group">
+              <label for="ime">Ime</label>
+              <input class="form-control" type="text" id="ime" #ime tabindex="1" required/>
+          </div>
+          <div class="form-group">
+              <label for="prezime">Prezime</label>
+              <input class="form-control" type="text" id="prezime" #prezime tabindex="2" required />
+          </div>
+
+          <div class="form-group">
+              <label for="korisnickoIme">Korisničko ime</label>
+              <input class="form-control" type="text" id="korisnickoIme" #korisnickoIme tabindex="3" required />
+          </div>
+
+          <div class="form-group">
+              <label for="email">Email</label>
+              <input class="form-control" type="text" id="opis" #email tabindex="4">
+          </div>
+
+          <div class="form-group">
+            <label for="lozinka">Lozinka</label>
+            <input class="form-control" type="text" id="lozinka" #lozinka tabindex="4">
+        </div>
+
+          <div class="float-right">
+              <button class="btn btn-outline-primary mr-1" type="submit" tabindex="6">Dodaj admina</button>
+              <button class="btn btn-outline-warning" type="button" (click)="goBack()" tabindex="7">Odustani</button>
+          </div>
+
+      </form>
+  </div>
+</div>

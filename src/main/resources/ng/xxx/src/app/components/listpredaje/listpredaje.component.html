@@ -1,0 +1,25 @@
+<div class="container">
+
+        <button class="btn btn-primary" (click)="dodajNoviPredaje(predaje)" routerLink="{{'/addpredaje'}}">Novi nastavnik</button>
+
+    <table class="table table-striped">
+        <thead>
+            <th>Id</th>
+            <th>Nastavnik</th>
+            <th>Predmet</th>
+            <th>Operations </th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let predaje of predaju$ | async">
+                <td>{{predaje.idPredaje}}</td>
+                <td>{{predaje.nastavnik.ime}} {{predaje.nastavnik.prezime}}</td>
+                <td>{{predaje.predmet.nazivPredmeta}}</td>
+                <td><button class="btn btn-danger" (click)="obrisiPredajePoId(predaje)">Obriši</button>
+                    <button class="btn btn-primary" (click)="izmeniPredaje(predaje)" routerLink="{{'/editpredaje/' + predaje.idPredaje}}">Izmeni</button>
+                   
+
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-primary" (click)="dodajNoviPredaje(predaje)" routerLink="{{'/addpredaje'}}">Novi nastavnik</button>
+</div>

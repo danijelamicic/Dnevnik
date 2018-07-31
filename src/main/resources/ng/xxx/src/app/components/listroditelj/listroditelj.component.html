@@ -1,0 +1,33 @@
+<div class="container">
+
+        <button class="btn btn-primary"  routerLink="/addroditelj">Novi roditelj</button>
+
+  <table class="table table-striped">
+      <thead>
+          <th>Id</th>
+          <th>Ime</th>
+          <th>Prezime</th>
+          <th>Korisničko ime </th>
+          <th>Email </th>
+
+          <th>Operacija </th>
+      </thead>
+      <tbody>
+          <tr *ngFor="let roditelj of roditelji$ | async">
+              <td>{{roditelj.id}}</td>
+              <td>{{roditelj.ime}}</td>
+              <td>{{roditelj.prezime}}</td>
+              <td>{{roditelj.korisnickoIme}}</td>
+              <td>{{roditelj.email}}</td>
+
+              <td>
+                  <button class="btn btn-danger" (click)="delete(roditelj.id)">Obriši</button>
+                  <button class="btn btn-primary" (click)="izmeniRoditelja(roditelj)" routerLink="{{'/editroditelj/' + roditelj.id}}">Izmeni</button>
+                 
+              </td>
+
+          </tr>
+      </tbody>
+  </table>
+  <button class="btn btn-primary"  routerLink="/addroditelj">Novi roditelj</button>
+</div>
